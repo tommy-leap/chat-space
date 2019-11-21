@@ -9,6 +9,8 @@
 ### Association
 - has_many : posts
 - belongs_to : groups
+- has_many : groups_users
+- has_many  :groups,  through:  :group_users
 
 ## postsテーブル
 |Column|Type|Options|
@@ -16,8 +18,10 @@
 |text|text|null: false|
 |image|taxt|null: false|
 |user_id|integer|null: false foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
+- belongs_to :group
 
 ## groupsテーブル
 |Column|Type|Options|
@@ -26,6 +30,9 @@
 |user_id|integer|null: false foreign_key: true|
 ### Association
 - belongs_to :user
+- has_many : posts
+- has_many : groups_users
+- has_many  :users,  through:  :group_users
 
 ## groups_usersテーブル
 |Column|Type|Options|
