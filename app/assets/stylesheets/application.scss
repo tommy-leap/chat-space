@@ -2,9 +2,6 @@
 @import "font-awesome-sprockets";
 @import "./font-awesome";
 
-//テキストカラー
-$font_color1: #fff;
-
 
   .side-bar{
     margin: 0;
@@ -28,10 +25,10 @@ $font_color1: #fff;
         &__name{
           font-size: 16px;
           font-weight: bold;
-          color: $font_color1;
+          color: #fff;
         }
         &__btn{
-          color: $font_color1;
+          color: #fff;
           font-size: 14px;
           text-decoration: none;
         }
@@ -44,11 +41,11 @@ $font_color1: #fff;
       background-color: #2f3e51;
 
       .group{
-        color: $font_color1;
+        color: #fff;
         padding: 0 20px;
         &__name{
           padding-top: 20px;
-          color: $font_color1;
+          color: #fff;
           font-size: 15px;
           list-style: none;
         }
@@ -56,7 +53,7 @@ $font_color1: #fff;
           margin-top: 5px;
           padding-bottom:40px;
           font-size:9px;
-          color:$font_color1;
+          color: #fff;
           list-style: none;
         }
       }
@@ -172,7 +169,7 @@ $font_color1: #fff;
         height: 50px;
         font-size:18px;
         background-color: #38aef0;
-        color: $font_color1;
+        color: #fff;
         border-style: none; 
         padding: 0 29px;
         margin-left: 15px;
