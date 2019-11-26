@@ -3,12 +3,13 @@
   .header-top
     %ul.user
       %li.user__name
+        = current_user.name
         username
       %li.user__button
         =link_to "#", class: "user__btn " do
           <i class="fas fa-edit "></i>
-        =link_to "#", class: "user__btn " do
-          <i class="fas fa-cog" ></i>
+        =link_to edit_user_path(current_user)" do
+          = fa_icon 'cog', 'class','icon'
   
   .side-content
     %ul.group
