@@ -1,0 +1,28 @@
+.main
+
+  .main-header
+    %ul.main-header-left
+      %li.main-header-left__name
+        group name
+      %li.main-header-left__member
+        Member
+    .main-header-right
+      .main-header-right__edit-btn
+        = link_to 'Edit', "＃", class:"Editlink" 
+
+  .main-chat
+    %ul.main-chat-log
+      %li.main-chat-log__name
+        username
+      %li.main-chat-log__deta
+        2019/11/24/20:23
+    .main-chat__message
+      this is first message
+  
+  .form
+    %input.form-edit{type: "text", placeholder: "type a message"}
+      %label{class:"file__btn"}
+        %input.file__btn.image{type: "file"}
+        %i.far.fa-image
+
+    %input.submit__btn{type: "submit", value: "Send"}

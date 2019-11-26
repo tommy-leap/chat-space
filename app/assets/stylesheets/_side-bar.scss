@@ -1,0 +1,56 @@
+.side-bar{
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  
+
+  .header-top {
+    background-color: #253141;
+    height: 100px;
+    padding: 0 20px; 
+    display: flex;
+
+    .user{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      &__name{
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+      }
+      &__btn{
+        color: #fff;
+        font-size: 14px;
+        text-decoration: none;
+      }
+    }
+  }
+
+
+  .side-content{
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+
+    .group{
+      color: #fff;
+      padding: 0 20px;
+      &__name{
+        padding-top: 20px;
+        color: #fff;
+        font-size: 15px;
+        list-style: none;
+      }
+      &__message{
+        margin-top: 5px;
+        padding-bottom:40px;
+        font-size:9px;
+        color: #fff;
+        list-style: none;
+      }
+    }
+  } 
+}

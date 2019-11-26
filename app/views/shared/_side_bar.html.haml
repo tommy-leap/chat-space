@@ -1,0 +1,19 @@
+.side-bar
+  
+  .header-top
+    %ul.user
+      %li.user__name
+        username
+      %li.user__button
+        =link_to "#", class: "user__btn " do
+          <i class="fas fa-edit "></i>
+        =link_to "#", class: "user__btn " do
+          <i class="fas fa-cog" ></i>
+  
+  .side-content
+    %ul.group
+      %li.group__name
+        groupname
+      %li.group__message
+        ここにはコメントが入ります
+
