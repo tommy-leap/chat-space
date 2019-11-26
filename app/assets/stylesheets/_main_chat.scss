@@ -1,0 +1,113 @@
+.main{
+  position: fixed;
+  top: 0;
+  left: 300px;
+  margin: 0;
+  width: calc(100vw - 300px);
+  box-sizing: border-box;
+  height: 100vh;
+  
+  
+  .main-header{
+    height: 100px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eeeeee;
+    
+    .main-header-left{
+      margin-top: 35px;
+      &__name{
+        font-size: 20px;
+        color: #333333; 
+        margin-bottom: 15Px;    
+      }           
+      &__member{
+        font-size: 12px;
+        color: #999999;
+       }
+    }
+  
+    .main-header-right{ 
+      margin-top: 30px;
+      display: block;
+        &__edit-btn{
+        padding: 0 20px;
+        font-size: 16px;
+        border: 1px solid #38AEF0;
+        line-height: 38px;
+        .Editlink{
+          text-decoration: none;
+          color: #38AEF0;
+        }
+      }
+    }
+  }
+    .main-chat{
+      background-color: #fafafa;
+      padding: 46px 40px;
+      height: calc(100vh - 283px);
+  
+      .main-chat-log{
+        display: flex;
+        &__name{
+          font-size: 16px;
+          font-weight: bold;
+          color: #434a54;
+        }
+  
+        &__deta{
+          color: #999999;
+          font-size: 12px;
+          margin-left: 10px;
+        }
+      }
+  
+        .main-chat__message{
+          margin-top: 10px;
+          font-size: 14px;
+          color: #434a54;
+        } 
+    }
+  
+    .form{
+      padding: 20px 40px;
+      line-height: 50px;
+      background-color: #ddd; 
+      display: flex;
+    
+      .form-edit{
+        margin-left: 10px;
+        width: 100vw;
+        height: 50px;
+        padding:0 40px 0 10px;
+        border-style: none; 
+        background-color: white;
+        position: relative;
+      }
+  
+        .file__btn{ 
+          color: black;
+          font-size: 23px;
+          text-decoration: none;
+          line-height: 50px;
+          position: absolute;
+          right: 159px;
+          
+          .image{
+            display: none;
+          }
+        }
+      
+      .submit__btn{
+        width: 94px;
+        height: 50px;
+        font-size:18px;
+        background-color: #38aef0;
+        color: #fff;
+        border-style: none; 
+        padding: 0 29px;
+        margin-left: 15px;
+      }
+    }  
+  }
