@@ -1,0 +1,19 @@
+.side-bar
+  
+  .header-top
+    %ul.user
+      %li.user__name
+        = current_user.name
+      %li.user__btn
+        = link_to do
+          = icon('fas', 'pen-square', class: 'user__btn')
+        = link_to edit_user_path(current_user) do
+          = icon('fas', 'cog', class: 'user__btn')
+  
+  .side-content
+    %ul.group
+      %li.group__name
+        groupname
+      %li.group__message
+        ここにはコメントが入ります
+
