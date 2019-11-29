@@ -17,10 +17,10 @@ class GroupsController < ApplicationController
       render :new
     end
   end
-  
+
   def update
     if @group.update(group_params)
-      redirect_to root_path, notice: 'グループを変更しました'
+      redirect_to group_messages_path(@group), notice: 'グループを変更しました'
     else
       render :edit
     end
