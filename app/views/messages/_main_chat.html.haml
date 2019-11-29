@@ -1,0 +1,38 @@
+.messages
+  = render @messages
+
+.main
+
+  .main-header
+    %ul.main-header-left
+      %li.main-header-left__name
+        = @group.name
+          
+      Member :
+      %li.main-header-left__member
+        - @group.users.each do |user|
+          =user.name
+          
+    .main-header-right
+      .main-header-right__edit-btn
+        = link_to edit_group_path(@group) do
+          Edit
+
+  .main-chat
+    %ul.main-chat-log
+      %li.main-chat-log__name
+        = @group.name
+      %li.main-chat-log__deta
+        =@group
+    .main-chat__message
+      = @group_message
+  
+  .form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form-edit', placeholder: 'type a message'
+      .file__btn
+        = f.label :image, class: 'file__btn' do
+          = icon('fas', 'image', class: 'file__btn')
+          = f.file_field :image, class: 'image'
+      .submit__btn
+        = f.submit 'Send', class: 'submit__btn'
