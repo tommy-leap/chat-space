@@ -1,11 +1,9 @@
 .main{
-  position: fixed;
-  top: 0;
+  float: right;
   left: 300px;
-  margin: 0;
+  right: 0;
   width: calc(100vw - 300px);
-  box-sizing: border-box;
-  height: 100vh;
+  position: fixed;
   
   
   .main-header{
@@ -52,7 +50,11 @@
       padding: 46px 40px;
       height: calc(100vh - 283px);
       overflow: scroll;
-  
+      
+      .message{
+        margin-bottom: 50px;
+      }
+
       .upper-message{
         display: flex;
         &__user-name{
@@ -108,12 +110,12 @@
       
       .submit__btn{
         height: 50px;
-        width: 30px;
+        width: 90px;
         font-size:15px;
         background-color: #38aef0;
         color: #fff;
         border: none; 
-        padding: 0 30px;
+        // padding: 0 30px;
         float: right;
         // margin-left: 15px;
         cursor: pointer;
