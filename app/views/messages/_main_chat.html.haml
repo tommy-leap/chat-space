@@ -1,6 +1,3 @@
-.messages
-  = render @messages
-
 .main
 
   .main-header
@@ -19,13 +16,7 @@
           Edit
 
   .main-chat
-    %ul.main-chat-log
-      %li.main-chat-log__name
-        = @group.name
-      %li.main-chat-log__deta
-        =@group
-    .main-chat__message
-      = @group_message
+    =render @messages
   
   .form
     = form_for [@group, @message] do |f|
