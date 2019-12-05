@@ -54,9 +54,7 @@ $(function(){
   })
   var reloadMessages = function() {
     if(location.pathname.match(/\/groups\/\d+\/messages/)){
-      console.log(location.pathname)
     last_message_id = $('.message:last'). data("message-id");
-    console.log(last_message_id) 
       $.ajax({
         url: 'api/messages',
         type: 'get',
@@ -72,7 +70,7 @@ $(function(){
         $('.message').animate({scrollTop: $('.message')[0].scrollHeight}, 'fast');
       })
       .fail(function() {
-        console.log('error');
+        alert('error');
       });
     }; 
   } 
