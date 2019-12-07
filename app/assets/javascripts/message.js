@@ -53,25 +53,25 @@ $(function(){
     })
   })
   var reloadMessages = function() {
-    if(location.pathname.match(/\/groups\/\d+\/messages/)){
-    last_message_id = $('.message:last'). data("message-id");
-      $.ajax({
-        url: 'api/messages',
-        type: 'get',
-        dataType: 'json',
-        data: {id: last_message_id}
-      })
-      .done(function(messages) {
-        var insertHTML = '';
-        $.each(messages, function(i,message) {
+    if(window.location.href.match(/\/groups\/\d+\/messages/)){
+       last_message_id = $('.message:last'). data("message-id");
+        $.ajax({
+          url: 'api/messages',
+          type: 'get',
+          dataType: 'json',
+          data: {id: last_message_id}
+        })
+        .done(function(messages) {
+          var insertHTML = '';
+          messages.forEach(function (message) {
           insertHTML += buildHTML(message)
+          });
+          $('.main-chat').append(insertHTML);
+          $('.main-chat').animate({scrollTop: $('.main-chat')[0].scrollHeight});
+        })
+        .fail(function() {
+          alert('error');
         });
-        $('.messages').append(insertHTML);
-        $('.message').animate({scrollTop: $('.message')[0].scrollHeight}, 'fast');
-      })
-      .fail(function() {
-        alert('error');
-      });
     }; 
   } 
   setInterval(reloadMessages, 7000);
