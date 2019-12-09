@@ -5,10 +5,11 @@
       %li.main-header-left__name
         = @group.name
           
-      Member :
-      %li.main-header-left__member
-        - @group.users.each do |user|
-          =user.name
+      %li.main-header-left__memberbox
+        Member : 
+        .main-header-left__member
+          - @group.users.each do |user|
+            =user.name
           
     .main-header-right
       .main-header-right__edit-btn
@@ -23,7 +24,7 @@
       = f.text_field :content, class: 'form-edit', placeholder: 'type a message'
       .file__btn
         = f.label :image, class: 'file__btn' do
-          = icon('fas', 'image', class: 'file__btn')
+          = icon('far fa-image', class: 'file__btn')
           = f.file_field :image, class: 'image'
       .submit__btn
         = f.submit 'Send', class: 'submit__btn'

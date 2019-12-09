@@ -64,10 +64,10 @@ $(function(){
         .done(function(messages) {
           var insertHTML = '';
           messages.forEach(function (message) {
-          insertHTML += buildHTML(message)
-          });
+          insertHTML += buildHTML(message);
           $('.main-chat').append(insertHTML);
           $('.main-chat').animate({scrollTop: $('.main-chat')[0].scrollHeight});
+          });
         })
         .fail(function() {
           alert('error');
